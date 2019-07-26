@@ -1,60 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import CurrentWeather from "./currentweather";
+import forecast from "./forecast";
+import home from "./home";
 
-function App() {
+
+// function Index() {
+//   return <h2>Home</h2>;
+// }
+
+// function CurrentWeather() {
+//   return <h2>Current Weather</h2>;
+// }
+
+// function Forecast() {
+//   return <h2>Users</h2>;
+// }
+
+function AppRouter() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/src/home">Home</Link>
+            </li>
+            <li>
+              <Link to="/src/currentweather">Current Weather</Link>
+            </li>
+            <li>
+              <Link to="/src/forecast">Forceast</Link>
+            </li>
+          </ul>
+        </nav>
 
-
-          TEST!! DOES THIS WORK??!?
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Route path="/src/home" exact component={home} />
+        <Route path="/src/currentweather" component={CurrentWeather} />
+        <Route path="/src/forecast" component={forecast} />
+      </div>
+    </Router>
   );
 }
 
-export default App;
-
-// Require node-oauth package: npm install oauth
-// Copyright 2019 Oath Inc. Licensed under the terms of the zLib license see https://opensource.org/licenses/Zlib for terms.
-
-var OAuth = require('oauth');
-var header = {
-    "X-Yahoo-App-Id": "your-app-id"
-};
-var request = new OAuth.OAuth(
-    null,
-    null,
-    'your-consumer-key',
-    'your-consumer-secret',
-    '1.0',
-    null,
-    'HMAC-SHA1',
-    null,
-    header
-);
-request.get(
-    'https://weather-ydn-yql.media.yahoo.com/forecastrss?location=sunnyvale,ca&format=json',
-    null,
-    null,
-    function (err, data, result) {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log(data)
-        }
-    }
-);
+export default AppRouter;

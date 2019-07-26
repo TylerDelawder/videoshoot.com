@@ -32,6 +32,15 @@ a:hover {
   
 }
 
+.title-container__title {
+  word-wrap: break-word;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 /* FOOTER STUFF */
 
 .footer {
@@ -51,3 +60,4 @@ a:hover {
 #bottom-margin{
   margin-bottom: 50px;
 }
+

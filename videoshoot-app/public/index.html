@@ -1,125 +1,22 @@
-<!doctype html>
-<html lang="en">
 
+<!DOCTYPE html>
+<html>
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="src/app.js"></script>
+<link rel="stylesheet"  href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet"  href='./index.css' rel='stylesheet' type='text/css'>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <!-- My CSS -->
-  <link rel="stylesheet" href="src/index.css" />
-  
-
-  <title>VideoShoot.com!</title>
-</head>
-
+  <title>Video Shoot.com</title>
+  </head>
 <body>
-  <main>
+<div id= 'root'></div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
 
-    <!-- Navigation Stuff -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 26 100 48" x="0px" y="0px" alt="Movie Reel Logo">
-        <symbol id="reel" viewBox="0 26 100 48">
-          <path
-            d="M86.2 46.9c-.5-.4-1.1-.5-1.7-.4l-8.4 2c-.9.2-1.5 1-1.5 1.9v1.4h-2.5V41.5c0-1.1-.9-2-2-2H19.9c-1.1 0-2 .9-2 2v5h-2.5c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h2.5v20.3c0 1.1.9 2 2 2h12.5L29 92.5c-.3 1.1.4 2.2 1.5 2.4.2 0 .3.1.5.1.9 0 1.7-.6 1.9-1.5l3.7-14.7H42V93c0 1.1.9 2 2 2s2-.9 2-2V78.8h5.5l3.7 14.7c.2.9 1 1.5 1.9 1.5.2 0 .3 0 .5-.1 1.1-.3 1.7-1.4 1.5-2.4l-3.4-13.7h14.4c1.1 0 2-.9 2-2V66.4h2.5v1.4c0 .9.6 1.7 1.5 1.9l8.4 2c.6.1 1.2 0 1.7-.4s.8-1 .8-1.6V48.5c0-.7-.3-1.2-.8-1.6zM83 67.3l-4.4-1.1v-1.8c0-1.1-.9-2-2-2h-6.5c-1.1 0-2 .9-2 2v10.4H21.9V54.5c0-1.1-.9-2-2-2h-2.5v-2h2.5c1.1 0 2-.9 2-2v-5h46.2v10.4c0 1.1.9 2 2 2h6.5c1.1 0 2-.9 2-2V52l4.4-1v16.3zM29.1 37.9c7.7 0 14-6.3 14-14s-6.3-14-14-14-14 6.3-14 14 6.3 14 14 14zm0-24c5.5 0 10 4.5 10 10s-4.5 10-10 10-10-4.5-10-10 4.5-10 10-10zM60.6 37.9c9 0 16.3-7.3 16.3-16.3S69.6 5.3 60.6 5.3s-16.3 7.3-16.3 16.3c0 8.9 7.3 16.3 16.3 16.3zm0-28.7c6.8 0 12.3 5.5 12.3 12.3 0 6.8-5.5 12.3-12.3 12.3s-12.3-5.5-12.3-12.3c0-6.8 5.6-12.3 12.3-12.3z" />
-        </symbol>
-      </svg></a>
-      <svg class="icon">
-        <use xlink:href="#reel" /></svg><span class="navbar-text">
-        Video Shoot.com
-      </span>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto ml-5">
-          <li class="nav-item active">
-            <a class="nav-link" href="/index.html"> Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/SignUp.html">Sign-Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/suggest.html">Suggest a movie</a>
-          </li>
-        </ul>
-
-      </div>
-    </nav>
-    <!-- /Navigation Stuff -->
-
-    <!-- Heading -->
-    <div class="jumbotron jumbotron-fluid text-white">
-      <div class="container">
-        <h1 class="display-4 text-center">Welcome to Video Shoot.com!</h1>
-      </div>
-    </div>
-    <!-- /heading -->
-
-    <div class="container bg-light margin-bottom p-4">
-      <div class="row">
-        <div class="col-lg-6 col-sm-12 align-items-start">
-          <h2>Making you prepared.</h2>
-          You will be able to come here and check the weather, and see which gear you need for your video shoot.
-        </div>
-        <!-- Modal for my video -->
-        <div class="col-lg-6 col-sm-12 align-items-end pt-5 text-center">
-          <a href="#" class="btn btn-outline-dark btn-lg" data-toggle="modal" data-target="#videoModal"
-            data-theVideo="https://www.youtube.com/embed/6gYsLO2YAwk">Click Here for Movie!</a>
-          <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal"
-            aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6gYsLO2YAwk" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><br><br><br>
-    </div>
-    </div>
-    <!-- /modal for my video -->
-
-   
-  </main>
-
-  <!-- footer -->
-
-  <footer class="card-footer bg-light footer-font-style text-muted footer-position fixed-bottom text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col"> 2019 &copy VideoShoot.com
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- /footer -->
-
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS, then my javascript -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script src="src/app.js"></script>
-  <script type="text/javascript" src="src/app.js"></script>
 </body>
 
 </html>
